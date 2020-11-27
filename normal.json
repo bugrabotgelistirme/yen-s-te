@@ -1,0 +1,76 @@
+[
+    {
+        "kodlar": {
+            "ads": {
+                "isim": "ads",
+                "id": "W9cYebeaUb",
+                "desc": "asd",
+                "modules": [
+                    "asd"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/613719402952523786/6ec091f71e2a6417e3dd9b42e308e36d.png",
+                "main_code": "asd",
+                "komutlar_code": "asd",
+                "kod_rank": "normal",
+                "k_adi": "ㄠ𝓁arghi",
+                "date": "10/21/2020"
+            },
+            "balıktut": {
+                "isim": "balıktut",
+                "id": "LxMHu86p1r",
+                "desc": "balıktutarsınız",
+                "modules": [
+                    "discord.js"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/613719402952523786/6ec091f71e2a6417e3dd9b42e308e36d.png",
+                "main_code": "yok",
+                "komutlar_code": "const Discord = require('discord.js');\r\nconst client = new Discord.Client();\r\n\r\n\r\nexports.run = (client, message) => {\r\n   message.channel.send('Balık Tuttun Balığı Çekiyorsun..').then(message => {\r\n   var espriler = ['Sazan Tuttun! :fish:' ,'Köpek Balığı Tuttun İyi Para Eder Sat Sat :D' ,'Uskumru Tuttun! :fish:' ,'Mezgit Tuttun! Havyarıda Var hee ;) :fish:' ,'Japon Balığı Tuttun Yemeyi Düşünmüyorsun Herhalde?' ,'Hamsi Tuttun! :fish:' ,'Levrek Tuttun! :fish:' ,'Hiçbirşey Tutamadın Maalesef! :wastebasket:' ,'Alabalık Tuttun! :fish:' ,'Maalesef Balık Oltadan Kaçtı! :wastebasket:' ,'İstavrit Tuttun! :fish:'];\r\n      var espri = espriler[Math.floor(Math.random() * espriler.length)];//lexcode\r\n            message.edit(`${espri}`);\r\n });\r\n  }\r\n\r\nexports.conf = {\r\n  enabled: true,\r\n  guildOnly: false,\r\n  aliases: ['espri', 'espri-yap', 'yap-espri', 'yapbi-espri'],//larghi\r\n  permLevel: 0\r\n};\r\n\r\nexports.help = {\r\n  name: 'balıktut',\r\n  description: 'Balık Tutarsın.',\r\n  usage: ''\r\n};",
+                "kod_rank": "normal",
+                "k_adi": "ㄠ𝓁arghi",
+                "date": "10/22/2020"
+            },
+            "reklame-engelleme": {
+                "isim": "reklame-engelleme",
+                "id": "n62K8pTGlp",
+                "desc": "reklam engeller",
+                "modules": [
+                    "discord.js -  quick.db"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/613719402952523786/6ec091f71e2a6417e3dd9b42e308e36d.png",
+                "main_code": "client.on('message', async message => {\r\n  let ke = await db.fetch(`reklam_${message.guild.id}`)\r\n  \r\n  if (ke === \"kapali\" || ke === undefined || ke === null){\r\n    return;\r\n  } else if (ke === \"acik\") {\r\n    let reklam = [\"discord.gg/\", \"https://\", \".org\", \".com\", \".cf\", \".tk\", \".xyz\"]\r\n    if (reklam.some(word => message.content.includes(word))){\r\n        if (!message.member.hasPermission(\"BAN_MEMBERS\")) {\r\n        message.delete();\r\n        message.channel.send(\"Kurucuya gönderdim!!! Bir daha reklam yapma!\")\r\n        message.guild.owner.send(\"Sunucunuzda bir kişi reklam yaptı. \\nKullanıcı: \"+ message.author.tag +\" \\nMesaj: **\"+ message +\"** \")\r\n      }\r\n    }\r\n    \r\n  }\r\n})",
+                "komutlar_code": "const db = require('quick.db')\r\nconst Discord = require('discord.js')\r\nconst ayarlar = require('../ayarlar.json')\r\n\r\nexports.run = async (client, message, args) => {\r\n  if(!message.member.hasPermission(\"ADMINISTRATOR\")) return message.channel.send(`Buna yetkin yok!`);\r\n  if (!args[0]) return message.channel.send(`aç veya kapat yazmalısın. \\`${ayarlar.prefix}reklamkoruma aç\\``)\r\nlet kufur = await db.fetch(`kufur_${message.guild.id}`)\r\n  if (args[0] == 'aç') {\r\nif (kufur) {\r\nmessage.channel.send('Reklam Koruması Zaten Aktif!')\r\nreturn\r\n} \r\nelse {\r\n    db.set(`kufur_${message.guild.id}`, 'Açık')\r\n     message.channel.send('Reklam filtresi başarıyla açıldı!')\r\n}\r\n  }\r\n  else if (args[0] == 'kapat') {\r\n    db.delete(`kufur_${message.guild.id}`, 'Kapalı')\r\n      message.channel.send('Reklam Filtresi başarıyla kapatıldı!')\r\n  }\r\n\r\n}\r\n//lc\r\nexports.conf = {\r\n  enabled: true,\r\n  guildOnly: true,\r\n  aliases: [\"reklam-koruma\"],\r\n  permLevel: 3\r\n};\r\n// lexcode\r\nexports.help = {\r\n  name: 'reklam-engelle',\r\n  description: 'lc',\r\n  usage: 'reklamkoruma'\r\n};",
+                "kod_rank": "normal",
+                "k_adi": "ㄠ𝓁arghi",
+                "date": "10/22/2020"
+            },
+            "youtuberol": {
+                "isim": "youtuberol",
+                "id": "AVkH6jBOiz",
+                "desc": "youtuberolursunuz",
+                "modules": [
+                    "discord.js "
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/613719402952523786/6ec091f71e2a6417e3dd9b42e308e36d.png",
+                "main_code": "yok",
+                "komutlar_code": "const Discord = require('discord.js');\r\nconst client = new Discord.Client();\r\n\r\n\r\nexports.run = function(client, message) {\r\n message.channel.send('YouTuber oluyorsun..').then(message => {\r\n\r\n   var youtuberlar = ['Meryem Can Oldun','Enes Batur Oldun','BuğraCode oldun :('];\r\n   var youtuber = youtuberlar[Math.floor(Math.random() * youtuberlar.length)];\r\n\r\n   message.edit(`${youtuber}`);\r\n});\r\n}\r\n\r\nexports.conf = {\r\n  enabled: true, //buğracodeçalınmasıyasak\r\n  guildOnly: false,  //buğracodeçalınmasıyasak\r\n  aliases: ['youtuber-ol','y-ol'], //buğracodeçalınmasıyasak\r\n  permLevel: 0  //buğracodeçalınmasıyasak\r\n};\r\n\r\nexports.help = {\r\n  name: 'youtuberol',  //buğracodeçalınmasıyasak\r\n  description: 'Botun pingini gösterir',  \r\n  usage: 'youtuberol'  //buğracodeçalınmasıyasak\r\n};\r\n",
+                "kod_rank": "normal",
+                "k_adi": "ㄠ𝓁arghi",
+                "date": "10/23/2020"
+            },
+            "sil": {
+                "isim": "sil",
+                "id": "809jlHVUJb",
+                "desc": "mesajsiler",
+                "modules": [
+                    "komutlara"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/613719402952523786/6ec091f71e2a6417e3dd9b42e308e36d.png",
+                "main_code": "yok",
+                "komutlar_code": "const Discord = require(\"discord.js\");\r\nconst errors = require(\"../utils/errors.js\");\r\n\r\nmodule.exports.run = async (bot, message, args) => {\r\n//\r\n\r\n  if(!message.member.hasPermission(\"MANAGE_MESSAGES\")) return errors.noPerms(message, \"MANAGE_MESSAGES\");\r\n  if(!args[0]) return message.reply(\" En Az \\`1 - 5000\\` Arasında Bir Tam Sayı Değeri Girmelisiniz.\");\r\n  message.channel.bulkDelete(args[0]).then(() => {\r\n    message.channel.send(`Temizlendi **${args[0]}** .`).then(msg => msg.delete(5000));\r\n  });\r\n}\r\n\r\nmodule.exports.help = {\r\n  name: \"sil\"\r\n}\r\nexports.conf = {\r\n  enabled: true,\r\n  guildOnly: false,\r\n  aliases: [\"temizle\"],\r\n  permLevel: 2,\r\n};\r\n\r\nexports.help = {\r\n  name: 'sil',\r\n  description: '',\r\n  usage: '',\r\n}//lexcode",
+                "kod_rank": "normal",
+                "k_adi": "ㄠ𝓁arghi",
+                "date": "10/26/2020"
+            }
+        }
+    }
+]

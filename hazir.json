@@ -1,0 +1,20 @@
+[
+    {
+        "kodlar": {
+            "BOT ALTYAPI ": {
+                "isim": "BOT ALTYAPI ",
+                "id": "GR4eXl2qf8",
+                "desc": "48 komutlu bot altyapı",
+                "modules": [
+                    "altyapı bot"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/613719402952523786/6ec091f71e2a6417e3dd9b42e308e36d.png",
+                "main_code": "https://glitch.com/~lexcodealtyapbugracoed",
+                "komutlar_code": "https://glitch.com/~lexcodealtyapbugracoed",
+                "kod_rank": "hazir",
+                "k_adi": "larghi",
+                "date": "10/27/2020"
+            }
+        }
+    }
+]

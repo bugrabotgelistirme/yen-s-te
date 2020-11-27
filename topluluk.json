@@ -1,0 +1,34 @@
+[
+    {
+        "kodlar": {
+            "dfsdfsdf": {
+                "isim": "dfsdfsdf",
+                "id": "VQ3h9b7KYN",
+                "desc": "sdfsdf",
+                "modules": [
+                    "sdfsdf"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/613719402952523786/6ec091f71e2a6417e3dd9b42e308e36d.png",
+                "main_code": "dsfsdfsd",
+                "komutlar_code": "sdfsdf",
+                "kod_rank": "topluluk",
+                "k_adi": "ㄠ𝓁arghi",
+                "date": "10/20/2020"
+            },
+            "qwe": {
+                "isim": "qwe",
+                "id": "usmVqHEb3M",
+                "desc": "qwe",
+                "modules": [
+                    "qwe"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/613719402952523786/6ec091f71e2a6417e3dd9b42e308e36d.png",
+                "main_code": "qwe",
+                "komutlar_code": "qwe",
+                "kod_rank": "topluluk",
+                "k_adi": "ㄠ𝓁arghi",
+                "date": "10/20/2020"
+            }
+        }
+    }
+]
